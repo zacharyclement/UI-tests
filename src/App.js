@@ -16,6 +16,7 @@ import SimpleMediaCard from './UI/SimpleCardMedia';
 import Paper from 'material-ui/Paper';
 
 
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -33,6 +34,18 @@ const styles = {
   },
   spacer: {
     height: 100,
+    background: 'black',
+  },
+  imageContainer: {
+    justifyContent: 'center',
+  },
+  image: {
+    width: '100%',
+    height: 'auto',
+    maxHeight: 600,
+    // maxWidth: 1050,
+    backgroundSize: 'cover',
+    margin: 'auto',
   }
 };
 
@@ -46,13 +59,17 @@ class App extends Component {
       <MuiThemeProvider theme={muiTheme}>
 
         <Header />
+        <Grid container justify={'center'} alignItems='flex-start'>
+          <img className={classes.image} src="https://images.unsplash.com/photo-1468136020796-0eec5226a897?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a2c21dce70f79e8b5fe0e77e142635b&auto=format&fit=crop&w=1350&q=80" />
+        </Grid>
+
         <div >
           <Grid item xs={12}>
-            <Grid container className={classes.spacer} justify={'center'} />
+            <Grid container className={classes.spacer} />
           </Grid>
 
-          <Grid item md>
-            <Grid container spacing={8} className={classes.root} justify={'center'} >
+          <Grid item sm={12}>
+            <Grid container spacing={16} justify={'center'} >
               <Grid item>
                 <SimpleMediaCard className={classes.card} />
               </Grid>
