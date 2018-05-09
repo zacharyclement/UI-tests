@@ -19,16 +19,13 @@ import Paper from 'material-ui/Paper';
 const styles = {
   root: {
     flexGrow: 1,
-    background: 'black',
+    // background: 'black',
   },
   paper: {
     // padding: theme.spacing.unit * 2,
-    // height: 50,
-    margin: '0%',
-    height: '100%',
+    height: 100,
+    width: 100,
     textAlign: 'center',
-    // justify: 'center',
-    // color: theme.palette.text.secondary,
   },
   demo: {
     height: 200,
@@ -54,23 +51,40 @@ class App extends Component {
             <Grid container className={classes.spacer} justify={'center'} />
           </Grid>
 
-          <Grid item xs={12}>
-            <Grid container className={classes.root} justify={'center'} >
-              <SimpleMediaCard className={classes.card}>xs</SimpleMediaCard>
+          <Grid item md>
+            <Grid container spacing={8} className={classes.root} justify={'center'} >
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
             </Grid>
           </Grid>
 
           <Grid item xs={12}>
             <Grid container className={classes.spacer} justify={'center'} />
           </Grid>
+          // // // 
 
-          <Grid item xs={12}>
-            <Grid container className={classes.demo} justify={'center'} alignItems={'center'}>
+          <Grid container spacing={8} className={classes.demo} justify={'center'} alignItems={'center'}>
+
+            <Grid item>
               <Paper className={classes.paper}>1</Paper>
-              <Paper className={classes.paper}>2</Paper>
-              <Paper className={classes.paper}>3</Paper>
             </Grid>
+
+            <Grid item>
+              <Paper className={classes.paper}>2</Paper>
+            </Grid>
+
           </Grid>
+
 
           {/* <Grid item xs={6}>
               <Paper className={classes.paper}>xs=6</Paper>
