@@ -17,10 +17,21 @@ import Paper from 'material-ui/Paper';
 
 
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
     // background: 'black',
+  },
+  image: {
+    height: '100%',
+    width: '100%',
+    maxHeight: 550,
+    minHeight: 525,
+    objectFit: 'cover',
+  },
+  spacer: {
+    height: 100,
+    background: theme.palette.secondary.dark,
   },
   paper: {
     // padding: theme.spacing.unit * 2,
@@ -32,22 +43,8 @@ const styles = {
     height: 200,
     background: 'blue',
   },
-  spacer: {
-    height: 100,
-    background: 'black',
-  },
-  imageContainer: {
-    justifyContent: 'center',
-  },
-  image: {
-    width: '100%',
-    height: 'auto',
-    maxHeight: 600,
-    // maxWidth: 1050,
-    backgroundSize: 'cover',
-    margin: 'auto',
-  }
-};
+
+});
 
 class App extends Component {
 
@@ -57,15 +54,18 @@ class App extends Component {
 
     return (
       <MuiThemeProvider theme={muiTheme}>
+        <div className={classes.root}>
+          <Header />
 
-        <Header />
-        <Grid container justify={'center'} alignItems='flex-start'>
-          <img className={classes.image} src="https://images.unsplash.com/photo-1468136020796-0eec5226a897?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a2c21dce70f79e8b5fe0e77e142635b&auto=format&fit=crop&w=1350&q=80" />
-        </Grid>
+          <Grid container xs={12} justify={'center'}>
+            <img className={classes.image} src="https://images.unsplash.com/photo-1468136020796-0eec5226a897?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a2c21dce70f79e8b5fe0e77e142635b&auto=format&fit=crop&w=1350&q=80" />
+          </Grid>
 
-        <div >
-          <Grid item xs={12}>
-            <Grid container className={classes.spacer} />
+
+          <Grid container xs={12} className={classes.spacer} justify={'center'}>
+            <Grid item>
+              What is a Pakke event?
+            </Grid>
           </Grid>
 
           <Grid item sm={12}>
