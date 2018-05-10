@@ -103,7 +103,7 @@ class Header extends React.Component {
                                 {/* <CardMedia image={Logo} className={classes.pakkeLogo}/> */}
                             </Typography>
 
-                            <Button color="inherit">Login</Button>
+                            <Button variant='raised' color="secondary">Login</Button>
                         </Toolbar>
                     </AppBar>
                 </div>

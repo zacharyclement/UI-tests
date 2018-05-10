@@ -8,6 +8,7 @@ import Header from './UI/Header';
 import SimpleMediaCard from './UI/SimpleCardMedia';
 import Paper from 'material-ui/Paper';
 import WhatIsPakkeEvent from './UI/WhatIsPakkeEvent';
+import HowItWorks from './UI/HowItWorks';
 import Hero from './UI/Hero';
 // import ReactDOM from 'react-dom';
 // import MenuListComposition from './UI/MenuListComposition';
@@ -20,25 +21,17 @@ import Hero from './UI/Hero';
 
 const styles = theme => ({
   root: {
-    // flexGrow: 1,
+    flexGrow: 1,
     // background: 'black',
   },
-  margin: {
-    marginTop: '10rem',
-
-    // background: theme.palette.secondary.dark,
-    //this doesn't work, calls global theme
+  cards: {
+    marginTop: theme.spacing.unit * 5,
   },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    height: 100,
-    width: 100,
-    textAlign: 'center',
-  },
-  demo: {
-    marginTop: '10rem',
-    height: 200,
-    background: 'blue',
+  
+  whatIsPakkeEvent: {
+    marginTop: theme.spacing.unit * 5,
+    height: 400,
+    // background: theme.palette.secondary.light
   },
 
 });
@@ -54,14 +47,10 @@ class App extends Component {
         <div className={classes.root}>
           <Header />
           <Hero />
+          <WhatIsPakkeEvent />
+          <HowItWorks/>
 
-          <Grid container className={classes.margin} justify={'center'}>
-            <Grid item>
-              <WhatIsPakkeEvent />
-            </Grid>
-          </Grid>
-
-          <Grid container spacing={16} justify={'center'} className={classes.margin} >
+          <Grid container spacing={16} justify={'center'} className={classes.cards} >
             <Grid item>
               <SimpleMediaCard className={classes.card} />
             </Grid>
@@ -75,48 +64,8 @@ class App extends Component {
               <SimpleMediaCard className={classes.card} />
             </Grid>
           </Grid>
-
-          <Grid container className={classes.demo} justify={'center'} alignItems={'center'}>
-            
-            <Grid item>
-              <Paper className={classes.paper}>1</Paper>
-            </Grid>
-
-            <Grid item>
-              <Paper className={classes.paper}>2</Paper>
-            </Grid>
-
-          </Grid>
-
-
-          {/* <Grid item xs={6}>
-              <Paper className={classes.paper}>xs=6</Paper>
-            </Grid>
-            
-            <Grid item xs={6}>
-              <Paper className={classes.paper}>xs=6</Paper>
-            </Grid>
-            
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>xs=3</Paper>
-            </Grid>
-            
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>xs=3</Paper>
-            </Grid>
-            
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>xs=3</Paper>
-            </Grid>
-            
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>xs=3</Paper>
-            </Grid>*/}
         </div>
 
-        {/* <SimpleMediaCard className={classes.card}>xs</SimpleMediaCard>
-      <SimpleMediaCard className={classes.card}>xs</SimpleMediaCard>
-      <SimpleMediaCard className={classes.card}>xs</SimpleMediaCard> */}
 
       </MuiThemeProvider >
     );
