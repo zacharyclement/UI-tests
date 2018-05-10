@@ -7,7 +7,7 @@ import Typography from 'material-ui/Typography';
 
 const styles = {
   card: {
-    maxWidth: 300,
+    maxWidth: 350,
     // display: 'flex',
   },
   media: {

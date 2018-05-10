@@ -4,15 +4,18 @@ import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
 import Divider from 'material-ui/Divider';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import MenuIcon from '@material-ui/icons/Menu';
+import List, { ListItem, ListItemText } from 'material-ui/List';
 
+import MenuIcon from '@material-ui/icons/Menu';
+import Logo from './Logo_Black.png'
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
+import { CardMedia } from 'material-ui/Card';
+import Typography from 'material-ui/Typography';
+
+// import InboxIcon from '@material-ui/icons/Inbox';
+// import DraftsIcon from '@material-ui/icons/Drafts';
 
 const styles = {
     root: {
@@ -20,6 +23,12 @@ const styles = {
     },
     flex: {
         flex: 1,
+        
+        // width: 50,
+    },
+    pakkeLogo: {
+        height: 50,
+        marginTop: 5,
     },
     menuButton: {
         marginLeft: -12,
@@ -35,11 +44,11 @@ const styles = {
 
 
 class Header extends React.Component {
-    
-      state = {
+
+    state = {
         left: false,
     };
-    
+
 
     toggleDrawer = (side, open) => () => {
         this.setState({
@@ -71,7 +80,7 @@ class Header extends React.Component {
                         <ListItemText primary="Events" />
                     </ListItem>
 
-                    
+
                     <ListItem button>
                         <ListItemText primary="Login" />
                     </ListItem>
@@ -89,8 +98,11 @@ class Header extends React.Component {
                                 <MenuIcon onClick={this.toggleDrawer('left', true)} />
                             </IconButton>
                             <Typography variant="title" color="inherit" className={classes.flex}>
-                                PAKKE
+                                
+                                <img src={Logo} alt='none' className={classes.pakkeLogo}/>
+                                {/* <CardMedia image={Logo} className={classes.pakkeLogo}/> */}
                             </Typography>
+
                             <Button color="inherit">Login</Button>
                         </Toolbar>
                     </AppBar>

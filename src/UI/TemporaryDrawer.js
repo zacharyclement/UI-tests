@@ -4,9 +4,9 @@ import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
 import Divider from 'material-ui/Divider';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
+import List, { ListItem, ListItemText } from 'material-ui/List';
+// import InboxIcon from '@material-ui/icons/Inbox';
+// import DraftsIcon from '@material-ui/icons/Drafts';
 
 const styles = {
     list: {

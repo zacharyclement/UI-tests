@@ -33,6 +33,7 @@ function ButtonAppBar(props) {
           <Typography variant="title" color="inherit" className={classes.flex}>
             PAKKE
           </Typography>
+          <img src='Logo_White.png' alt='' />
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
