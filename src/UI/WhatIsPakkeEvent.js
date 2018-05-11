@@ -23,9 +23,9 @@ function WhatIsPakkeEvent(props) {
             padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
             //   color: theme.palette.common.white,
         },
-        test: {
-            marginTop: theme.spacing.unit * 5,
-            background: theme.palette.primary.main,
+        wrapper: {
+            marginTop: theme.spacing.unit * 8,
+            background: theme.palette.secondary.light,
             height: 300,
         },
     };
@@ -34,7 +34,7 @@ function WhatIsPakkeEvent(props) {
 
     return (
         
-        <Grid container justify={'center'} alignItems={'center'} style={styles.test}>
+        <Grid container justify={'center'} alignItems={'center'} style={styles.wrapper}>
             <Grid item>
                 <Paper style={{ width: 375 }}>
                     <Typography align={'center'} style={styles.box1}>What is a Pakke event?</Typography>

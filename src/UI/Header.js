@@ -100,7 +100,6 @@ class Header extends React.Component {
                             <Typography variant="title" color="inherit" className={classes.flex}>
                                 
                                 <img src={Logo} alt='none' className={classes.pakkeLogo}/>
-                                {/* <CardMedia image={Logo} className={classes.pakkeLogo}/> */}
                             </Typography>
 
                             <Button variant='raised' color="secondary">Login</Button>
