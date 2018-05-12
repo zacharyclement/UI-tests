@@ -10,6 +10,10 @@ import Paper from 'material-ui/Paper';
 import WhatIsPakkeEvent from './UI/WhatIsPakkeEvent';
 import HowItWorks from './UI/HowItWorks';
 import Hero from './UI/Hero';
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+import image2 from './UI/triangleWhite.svg';
+
 // import ReactDOM from 'react-dom';
 // import MenuListComposition from './UI/MenuListComposition';
 // import DetailedExpansionPanel from './UI/DetailedExpansionPanel';
@@ -27,12 +31,15 @@ const styles = theme => ({
   cards: {
     marginTop: theme.spacing.unit * 5,
   },
-  
+
   whatIsPakkeEvent: {
     marginTop: theme.spacing.unit * 5,
     height: 400,
     // background: theme.palette.secondary.light
   },
+  triangle: {
+    maxHeight: 50,
+  }
 
 });
 
@@ -43,31 +50,35 @@ class App extends Component {
     const { classes } = this.props;
 
     return (
-      <MuiThemeProvider theme={muiTheme}>
-        <div className={classes.root}>
-          <Header />
-          <Hero />
-          <WhatIsPakkeEvent />
-          <HowItWorks/>
+      <ParallaxProvider>
+        <MuiThemeProvider theme={muiTheme}>
+          <div className={classes.root}>
+            <Header />
+            <Hero />
+            <WhatIsPakkeEvent />
+            <HowItWorks />
 
-          <Grid container spacing={16} justify={'center'} className={classes.cards} >
-            <Grid item>
-              <SimpleMediaCard className={classes.card} />
+            <Grid container spacing={16} justify={'center'} className={classes.cards} >
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
             </Grid>
-            <Grid item>
-              <SimpleMediaCard className={classes.card} />
-            </Grid>
-            <Grid item>
-              <SimpleMediaCard className={classes.card} />
-            </Grid>
-            <Grid item>
-              <SimpleMediaCard className={classes.card} />
-            </Grid>
-          </Grid>
-        </div>
+          </div>
+          <img src={image2} className={classes.triangle} />
 
 
-      </MuiThemeProvider >
+
+        </MuiThemeProvider >
+      </ParallaxProvider>
     );
 
   }

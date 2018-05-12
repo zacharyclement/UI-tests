@@ -23,7 +23,7 @@ function SimpleMediaCard(props) {
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image="https://images.unsplash.com/photo-1503206557829-9a9979ad1227?ixlib=rb-0.3.5&s=3c112c70aa7408093559a4688263354e&auto=format&fit=crop&w=925&q=80"
+          image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>

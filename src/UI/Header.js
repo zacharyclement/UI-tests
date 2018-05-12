@@ -23,7 +23,7 @@ const styles = {
     },
     flex: {
         flex: 1,
-        
+
         // width: 50,
     },
     pakkeLogo: {
@@ -64,6 +64,10 @@ class Header extends React.Component {
             <div className={classes.list}>
                 <List component="nav">
                     <ListItem button>
+                        <ListItemText primary="PAKKE" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
                         <ListItemText primary="Home" />
                     </ListItem>
 
@@ -74,7 +78,6 @@ class Header extends React.Component {
                         <ListItemText primary="How It Works" />
                     </ListItem>
                 </List>
-                <Divider />
                 <List>
                     <ListItem button>
                         <ListItemText primary="Events" />
@@ -98,8 +101,8 @@ class Header extends React.Component {
                                 <MenuIcon onClick={this.toggleDrawer('left', true)} />
                             </IconButton>
                             <Typography variant="title" color="inherit" className={classes.flex}>
-                                
-                                <img src={Logo} alt='none' className={classes.pakkeLogo}/>
+
+                                <img src={Logo} alt='none' className={classes.pakkeLogo} />
                             </Typography>
 
                             <Button variant='raised' color="secondary">Login</Button>

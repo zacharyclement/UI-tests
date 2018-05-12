@@ -7,9 +7,9 @@ import Paper from 'material-ui/Paper';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
-import image from './triangleBlack.eps';
-
-
+// import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-scroll-parallax';
+import image2 from './triangleWhite.svg';
 
 
 
@@ -25,27 +25,25 @@ const styles = theme => ({
         zIndex: -1,
     },
     cardContent: {
-        marginTop: '15%',
+        justifyContent: 'center',
+    },
+    triangle: {
+        marginTop: '5%',
+        maxHeight: '10rem',
+    },
+    subheading: {
+        // marginTop: '2%',
     },
     bootstrapRoot: {
-        marginTop: '20%',
-        // padding: 0,
-        // 'label + &': {
-        //   marginTop: theme.spacing.unit * 3,
-        // },
+        marginTop: '15%',
     },
     bootstrapInput: {
-        marginRight: 20,
-        borderRadius: 3,
+        marginRight: '2%',
+        borderRadius: 1,
         backgroundColor: theme.palette.common.white,
-        // border: '1px solid #ced4da',
         fontSize: 16,
         color: 'lightGray',
         padding: '10px 12px',
-        // width: 'calc(100% - 24px)',
-        // transition: theme.transitions.create(['border-color', 'box-shadow']),
-        //   boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-
     },
     bootstrapFormLabel: {
         // fontSize: 18,
@@ -59,40 +57,42 @@ function Hero(props) {
     const { classes } = props;
 
     return (
-        // <Grid className={classes.root}>
-        //     <img className={classes.image} src="https://images.unsplash.com/photo-1468136020796-0eec5226a897?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a2c21dce70f79e8b5fe0e77e142635b&auto=format&fit=crop&w=1350&q=80" alt='none' />
-        // </Grid>
-
         <div>
             <Card>
-                <CardMedia className={classes.image} image="https://images.unsplash.com/photo-1468136020796-0eec5226a897?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a2c21dce70f79e8b5fe0e77e142635b&auto=format&fit=crop&w=1350&q=80)" >
-                    <CardContent>
-                        <CardMedia image={image} />
-                        <Typography className={classes.cardContent} align={'center'} variant={'headline'}>Be a part of your community</Typography>
-                        <Typography align={'center'} variant={'title'}>Discover | Experience | Connect</Typography>
-                        <Typography align={'center'}>
-                            <TextField
-                                defaultValue="enter your email"
-                                id="input"
-                                InputProps={{
-                                    disableUnderline: true,
-                                    classes: {
-                                        root: classes.bootstrapRoot,
-                                        input: classes.bootstrapInput,
-                                    },
-                                }}
-                                InputLabelProps={{
-                                    shrink: true,
-                                    className: classes.bootstrapFormLabel,
-                                }}
-                            />
-                            <Button variant='raised' color="secondary" size={'large'}>Join Us</Button>
-                        </Typography>
+                <CardMedia className={classes.image} image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg" >
+                    <CardContent className={classes.cardContent}>
+                        <Parallax offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="figure">
+                            <Grid container justify={'center'}>
+                                <img src={image2} className={classes.triangle} />
+                            </Grid>
+                            <Typography align={'center'} variant={'display2'} color={'primary'} gutterBottom>It's Happening, Go Find It.</Typography>
+                            <Typography align={'center'} variant={'subheading'} color={'primary'} className={classes.subheading}>Discover | Connect | Experience</Typography>
+                            <Typography align={'center'}>
+                                <TextField
+                                    defaultValue="enter your email"
+                                    id="input"
+                                    InputProps={{
+                                        disableUnderline: true,
+                                        classes: {
+                                            root: classes.bootstrapRoot,
+                                            input: classes.bootstrapInput,
+                                        },
+                                    }}
+                                    InputLabelProps={{
+                                        shrink: true,
+                                        className: classes.bootstrapFormLabel,
+                                    }}
+                                />
+                                <Button variant='raised' color="secondary" size={'large'}>Join Us</Button>
+                            </Typography>
+                        </Parallax>
                     </CardContent>
-
                 </CardMedia>
             </Card>
-        </div>
+        </div >
+
+
+
     )
 };
 

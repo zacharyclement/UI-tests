@@ -14,19 +14,19 @@ function WhatIsPakkeEvent(props) {
 
     const styles = {
         box1: {
-            backgroundColor: theme.palette.background.default,
+            // backgroundColor: theme.palette.background.default,
             padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
             color: theme.palette.text.primary,
         },
         box2: {
-            backgroundColor: theme.palette.secondary.main,
+            // backgroundColor: theme.palette.secondary.main,
             padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
             //   color: theme.palette.common.white,
         },
         wrapper: {
             marginTop: theme.spacing.unit * 8,
-            background: theme.palette.secondary.light,
-            height: 300,
+            background: theme.palette.primary.main,
+            height: 400,
         },
     };
 
@@ -36,9 +36,9 @@ function WhatIsPakkeEvent(props) {
         
         <Grid container justify={'center'} alignItems={'center'} style={styles.wrapper}>
             <Grid item>
-                <Paper style={{ width: 375 }}>
-                    <Typography align={'center'} style={styles.box1}>What is a Pakke event?</Typography>
-                    <Typography align={'center'} style={styles.box2}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
+                <Paper style={{ width: 375, }}>
+                    <Typography align={'center'} variant={'headline'} style={styles.box1}>What is a Pakke event?</Typography>
+                    <Typography align={'center'} variant={'subheading'}style={styles.box2}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
                 </Paper>
             </Grid>
         </Grid>
