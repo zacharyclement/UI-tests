@@ -51,6 +51,8 @@ const styles = theme => ({
 
 });
 
+// image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg"
+// https://picjumbo.com/wp-content/uploads/colorful-lights-on-night-garden-party_free_stock_photos_picjumbo_dsc00045-2210x1474.jpg
 
 function Hero(props) {
 

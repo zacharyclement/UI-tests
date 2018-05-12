@@ -7,7 +7,7 @@ import Grid from 'material-ui/Grid';
 import People from '@material-ui/icons/People';
 import Launch from '@material-ui/icons/Launch';
 import Theaters from '@material-ui/icons/Theaters';
-
+import IconButton from 'material-ui/IconButton';
 
 
 
@@ -19,9 +19,13 @@ function HowItWorks(props) {
 
     const styles = {
         wrapper: {
+            flexGrow: 1,
             marginTop: theme.spacing.unit * 5,
             // background: theme.palette.primary.main,
             height: '100%',
+        },
+        box0: {
+            width: 375,
         },
         box1: {
             // backgroundColor: theme.palette.background.default,
@@ -34,55 +38,110 @@ function HowItWorks(props) {
             //   color: theme.palette.common.white,
         },
         icon: {
-            maxHeight: 100,
+            height: 75,
+            width: 200,
         },
     };
 
     //style == className in these withTheme components
 
     return (
-        <div>
-            <Grid container style={styles.wrapper}>
-                <Grid container justify={'center'} >
-                    <Grid item>
-                        <Typography variant='headline' align={'center'} style={styles.box1}>How It Works</Typography>
-                    </Grid>
-                </Grid>
 
-                <Grid container spacing={16} justify={'center'} alignItems={'center'}>
-                    <Grid item>
-                        <Paper style={{ width: 375 }}>
+        <div>
+            <Grid container justify={'center'} style={styles.wrapper}>
+                <Paper style={{ width: '100%' }}>
+                    <Grid container justify={'center'} >
+                        <Grid item>
+                            <Typography bottomGutter variant='headline' align={'center'} style={styles.box1}>How It Works</Typography>
+                        </Grid>
+                    </Grid>
+
+
+
+                    <Grid container justify={'center'}>
+
+                        <Grid item style={styles.box0}>
                             <Grid container justify={'center'}>
                                 <Launch style={styles.icon} />
                             </Grid>
                             <Typography align={'center'} style={styles.box1} variant="title">1. Apply</Typography>
                             <Typography align={'center'} style={styles.box2} variant={'subheading'}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
-                        </Paper>
-                    </Grid>
-                    <Grid item justify={'center'}>
-                        <Paper style={{ width: 375 }}>
+                        </Grid>
+
+                        <Grid item style={styles.box0}>
                             <Grid container justify={'center'}>
                                 <People style={styles.icon} />
                             </Grid>
 
                             <Typography align={'center'} style={styles.box1} variant="title">2. Get Selected</Typography>
                             <Typography align={'center'} style={styles.box2} variant={'subheading'}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
-                        </Paper>
-                    </Grid>
-                    <Grid item>
-                        <Paper style={{ width: 375 }}>
+                        </Grid>
+
+                        <Grid item style={styles.box0}>
                             <Grid container justify={'center'}>
                                 <Theaters style={styles.icon} />
                             </Grid>
 
                             <Typography align={'center'} style={styles.box1} variant="title">3. Buy Ticket</Typography>
                             <Typography align={'center'} style={styles.box2} variant={'subheading'}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
-                        </Paper>
-                    </Grid>
-                </Grid>
-            </Grid>
-        </div >
+                        </Grid>
 
+                    </Grid>
+                </Paper>
+            </Grid>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        // <div>
+        //     <Grid container style={styles.wrapper}>
+        //         <Grid container justify={'center'} >
+        //             <Grid item>
+        //                 <Typography variant='headline' align={'center'} style={styles.box1}>How It Works</Typography>
+        //             </Grid>
+        //         </Grid>
+
+        //         <Grid container spacing={16} justify={'center'} alignItems={'center'}>
+        //             <Grid item>
+        //                 <Paper style={{ width: 375 }}>
+        //                     <Grid container justify={'center'}>
+        //                         <Launch style={styles.icon} />
+        //                     </Grid>
+        //                     <Typography align={'center'} style={styles.box1} variant="title">1. Apply</Typography>
+        //                     <Typography align={'center'} style={styles.box2} variant={'subheading'}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
+        //                 </Paper>
+        //             </Grid>
+        //             <Grid item justify={'center'}>
+        //                 <Paper style={{ width: 375 }}>
+        //                     <Grid container justify={'center'}>
+        //                         <People style={styles.icon} />
+        //                     </Grid>
+
+        //                     <Typography align={'center'} style={styles.box1} variant="title">2. Get Selected</Typography>
+        //                     <Typography align={'center'} style={styles.box2} variant={'subheading'}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
+        //                 </Paper>
+        //             </Grid>
+        //             <Grid item>
+        //                 <Paper style={{ width: 375 }}>
+        //                     <Grid container justify={'center'}>
+        //                         <Theaters style={styles.icon} />
+        //                     </Grid>
+
+        //                     <Typography align={'center'} style={styles.box1} variant="title">3. Buy Ticket</Typography>
+        //                     <Typography align={'center'} style={styles.box2} variant={'subheading'}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
+        //                 </Paper>
+        //             </Grid>
+        //         </Grid>
+        //     </Grid>
+        // </div > 
 
 
 
