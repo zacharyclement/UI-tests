@@ -9,7 +9,9 @@ import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 // import { Parallax, Background } from 'react-parallax';
 import { Parallax } from 'react-scroll-parallax';
-import image2 from './triangleWhite.svg';
+import image2 from './triangleWhite.png';
+import EmailInupt from './EmailInput';
+import image1 from './hero_image.jpg';
 
 
 
@@ -24,35 +26,30 @@ const styles = theme => ({
         objectFit: 'cover',
         zIndex: -1,
     },
-    cardContent: {
-        justifyContent: 'center',
+    headlineText: {
+        color: 'white',
+        fontWeight: 'bold',
+    },
+    subheadingText: {
+        color: 'white',
+        
     },
     triangle: {
-        marginTop: '5%',
+        marginTop: '10%',
         maxHeight: '10rem',
     },
-    subheading: {
-        // marginTop: '2%',
-    },
-    bootstrapRoot: {
-        marginTop: '15%',
-    },
-    bootstrapInput: {
-        marginRight: '2%',
-        borderRadius: 1,
-        backgroundColor: theme.palette.common.white,
-        fontSize: 16,
-        color: 'lightGray',
-        padding: '10px 12px',
-    },
-    bootstrapFormLabel: {
-        // fontSize: 18,
+    button: {
+        margin: '10%',
     },
 
 });
 
-// image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg"
-// https://picjumbo.com/wp-content/uploads/colorful-lights-on-night-garden-party_free_stock_photos_picjumbo_dsc00045-2210x1474.jpg
+// black image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg"
+// white https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg
+// gray https://i1.wp.com/www.solidcolore.com/3840/5b5b5b_background.jpg
+
+// 
+// https://images.unsplash.com/photo-1506774518161-b710d10e2733?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ff076230a3aea325e5b1ce3f6a7a208&auto=format&fit=crop&w=2100&q=80
 
 function Hero(props) {
 
@@ -61,32 +58,29 @@ function Hero(props) {
     return (
         <div>
             <Card>
-                <CardMedia className={classes.image} image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg" >
+                <CardMedia className={classes.image} image={image1} >
                     <CardContent className={classes.cardContent}>
                         <Parallax offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="figure">
                             <Grid container justify={'center'}>
                                 <img src={image2} className={classes.triangle} />
                             </Grid>
-                            <Typography align={'center'} variant={'display2'} color={'primary'} gutterBottom>It's Happening, Go Find It.</Typography>
-                            <Typography align={'center'} variant={'subheading'} color={'primary'} className={classes.subheading}>Discover | Connect | Experience</Typography>
-                            <Typography align={'center'}>
-                                <TextField
-                                    defaultValue="enter your email"
-                                    id="input"
-                                    InputProps={{
-                                        disableUnderline: true,
-                                        classes: {
-                                            root: classes.bootstrapRoot,
-                                            input: classes.bootstrapInput,
-                                        },
-                                    }}
-                                    InputLabelProps={{
-                                        shrink: true,
-                                        className: classes.bootstrapFormLabel,
-                                    }}
-                                />
-                                <Button variant='raised' color="secondary" size={'large'}>Join Us</Button>
-                            </Typography>
+                            <Typography className={classes.headlineText} align={'center'} variant={'display2'} gutterBottom>It's Happening, Go Find It.</Typography>
+                            <Typography className={classes.subheadingText} align={'center'} variant={'headline'}>Discover | Connect | Experience</Typography>
+                            <Grid container style={{ marginTop: '2%' }} justify={'center'} alignItems ={'center'} dirction={'column'}>
+                                <Grid item>
+                                    <Grid container justify={'center'} alignItems ={'center'} dirction={'column'}>
+                                        <Typography align={'center'}>
+                                            <EmailInupt />
+                                        </Typography>
+
+                                        <Typography align={'center'}>
+                                            <Button variant='raised' color="secondary" size={'large'}>Join Us</Button>
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+
+
                         </Parallax>
                     </CardContent>
                 </CardMedia>

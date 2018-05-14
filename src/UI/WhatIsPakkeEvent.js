@@ -13,36 +13,38 @@ function WhatIsPakkeEvent(props) {
     //   const primaryColor = theme.palette.primary.main;
 
     const styles = {
-        box1: {
-            // backgroundColor: theme.palette.background.default,
-            padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
-            color: theme.palette.text.primary,
-        },
-        box2: {
-            // backgroundColor: theme.palette.secondary.main,
-            padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
-            //   color: theme.palette.common.white,
-        },
         wrapper: {
             marginTop: theme.spacing.unit * 8,
-            background: theme.palette.primary.main,
-            height: 375,
             padding: `${theme.spacing.unit}px ${theme.spacing.unit * 20}px`,
         },
+        box1: {
+            padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+            color: theme.palette.text.primary,
+            minWidth: 340,
+            maxWidth: 750,
+        },
+        paper1: {
+            width: 350,
+        },
+        wrapper2: {
+            margin: '5%',
+        }
     };
 
     //style == className in these withTheme components
 
     return (
-        
-        <Grid container justify={'center'} alignItems={'center'} style={styles.wrapper}>
-            <Grid item>
-                <Paper style={{ width: 350, }}>
-                    <Typography align={'center'} variant={'headline'} style={styles.box1}>What is a Pakke event?</Typography>
-                    <Typography align={'center'} variant={'subheading'}style={styles.box2}>A Pakke event is a highly curated gathering. Each event is specially tailored for people to connect and discover all of the unique and special people they may not otherwise get a chance to have a conversation with. We encourage you to socialize in uniques spaces. These spaces are meant to help people connect and socialize in ways that simply aren’t possible at bars and other traditional spaces.</Typography>
-                </Paper>
+        <div>
+            <Grid container justify={'center'} alignItems={'center'} style={styles.wrapper}>
+
+                <Grid item md style={{ width: '100%', }}>
+                    <Grid container justify={'center'} style={{background: 'theme.palette.text.primary.main'}}>
+                        <Typography align={'center'} variant={'headline'} style={styles.box1}>Pakke events encourage you to discover unique environments, connect with new people, and experience more in your city.</Typography>
+                    </Grid>
+                </Grid>
+                {/* </Paper> */}
             </Grid>
-        </Grid>
+        </div >
 
 
 

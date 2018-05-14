@@ -13,6 +13,7 @@ import Hero from './UI/Hero';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 import image2 from './UI/triangleWhite.svg';
+import Typography from 'material-ui/Typography/Typography';
 
 // import ReactDOM from 'react-dom';
 // import MenuListComposition from './UI/MenuListComposition';
@@ -27,6 +28,8 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     // background: 'black',
+    background: 'url(http://www.designbolts.com/wp-content/uploads/2013/02/Sandbag-Grey-Seamless-Pattern-For-Website-Background.jpg)',
+
   },
   cards: {
     marginTop: theme.spacing.unit * 5,
@@ -58,7 +61,20 @@ class App extends Component {
             <WhatIsPakkeEvent />
             <HowItWorks />
 
+
+
+            <Grid container justify={'center'} style={{ marginTop: '10%' }}>
+              <Paper align={'center'}style={{width: 350}}>
+                <Typography style={{margin: '5%'}} variant='headline'>Pakke Inspired Events</Typography>
+              </Paper>
+            </Grid>
             <Grid container spacing={16} justify={'center'} className={classes.cards} >
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
+              <Grid item>
+                <SimpleMediaCard className={classes.card} />
+              </Grid>
               <Grid item>
                 <SimpleMediaCard className={classes.card} />
               </Grid>
@@ -73,7 +89,7 @@ class App extends Component {
               </Grid>
             </Grid>
           </div>
-          <img src={image2} className={classes.triangle} />
+          <footer />
 
 
 

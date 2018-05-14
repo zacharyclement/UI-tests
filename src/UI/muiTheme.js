@@ -7,14 +7,14 @@ const muiTheme = createMuiTheme({
 
     palette: {
       primary: {
-        light: '#ffffff',
-        main: '#f5f5f5',
-        dark: '#c2c2c2',
+        light: '#fafafa',
+        main: '#fafafa',
+        dark: '#c7c7c7',
       },
       secondary: {
-        light: '#7a7cff',
-        main: '#304ffe',
-        dark: '#0026ca',
+        light: '#768fff',
+        main: '#2962ff',
+        dark: '#0039cb',
       },
     },
   });

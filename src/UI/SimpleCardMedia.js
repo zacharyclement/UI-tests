@@ -4,6 +4,8 @@ import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import Logo from './Logo_Black.png'
+
 
 const styles = {
   card: {
@@ -14,6 +16,9 @@ const styles = {
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
+  logo: {
+    maxWidth: 75,
+  },
 };
 
 function SimpleMediaCard(props) {
@@ -21,18 +26,22 @@ function SimpleMediaCard(props) {
   return (
     <div>
       <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg"
-          title="Contemplative Reptile"
-        />
+
+        <CardMedia className={classes.image} image="http://webapp.blackscreen1.com/img/blackscreen1logo.jpg" >
+          <CardContent className={classes.cardContent}>
+              
+              <Typography align={'center'} variant={'display2'} color={'secondary'}> May</Typography>
+              <Typography align={'center'} variant={'display2'} color={'secondary'}>9th</Typography>
+              
+                
+          </CardContent>
+        </CardMedia>
+
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
             Pakke Launch Event
           </Typography>
-          <Typography gutterBottom variant="headline" component="h3" color='secondary'>
-            May 9th
-          </Typography>
+          
           <Typography component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
             across all continents except Antarctica
@@ -42,6 +51,8 @@ function SimpleMediaCard(props) {
           <Button size="small" color="secondary">
             Apply
           </Button>
+          <img src={Logo} className={classes.logo}/>
+
         </CardActions>
       </Card>
     </div>
